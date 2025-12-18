@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 600px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-color: rgb(200, 202, 205);
+            
+        }
+        .skills input {
+            width: auto;
+        }
+        button {
+            color: white;
+            background-color: cornflowerblue;
+            border: 0ch;
+            
+        }
+    </style>
+</head>
+<body>
+
+<h2 align="center">Job Application Form</h2>
+
+<form action="validate.php" method="POST" enctype="multipart/form-data">
+
+    <label>Full Name</label>
+    <input type="text" name="fullname">
+
+    <label>Email </label>
+    <input type="email" name="email">
+
+    <label>Contact Number</label>
+    <input type="text" name="contact">
+
+    <label>Date of Birth</label>
+    <input type="date" name="dob">
+
+    <label>Position Applied For</label>
+    <select name="position">
+        <option value="">-- Select Position --</option>
+        <option value="Software Developer">Software Developer</option>
+        <option value="Web Designer">Web Designer</option>
+        <option value="Project Manager">Project Manager</option>
+    </select>
+
+    <label>Upload Resume</label>
+    <input type="file" name="resume">
+
+    <label>Cover Letter</label>
+    <textarea name="coverletter" rows="5"></textarea>
+
+    <label>LinkedIn Profile</label>
+    <input type="url" name="linkedin">
+
+    <label>Work Experience (Years)</label>
+    <input type="number" name="experience" min="0">
+
+    <label>Skills</label>
+    <div class="skills"><br>
+        <input type="checkbox" name="skills[]" value="HTML/CSS"><b>HTML/CSS </b>
+        <input type="checkbox" name="skills[]" value="JavaScript"><b>JavaScript</b>
+        <input type="checkbox" name="skills[]" value="PHP"><b>PHP</b>
+        <input type="checkbox" name="skills[]" value="Java"><b>Java</b>
+    </div>
+
+    <br><br>
+    <button type="submit" >Apply</button>
+
+</form>
+
+</body>
+</html>
